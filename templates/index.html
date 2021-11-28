@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>News</title>
+</head>
+
+<body>
+    <h1>Quick Updates</h1>
+    {% block content %}
+    <audio src="{{ sayit(text='Hello from Flask !')}}"></audio> {% endblock %}
+
+    <div class="cont">
+        <div class="box">
+
+            {% for item in range(1,length) %}
+
+            <p class="heading">{{news[item]["Headline"]}}</p>
+            <p class="content">{{news[item]["Content"]}}</p>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <center>
+        <p>Made by nitesh singh</p>
+    </center>
+</body>
+
+</html>
